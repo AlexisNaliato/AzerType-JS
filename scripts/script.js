@@ -37,6 +37,9 @@ function validerEmail(mail) {
 
 //Si il y a une erreur dans le formulaire Crée un span avec le message d'erreur
 function afficherMessageErreur(message) {
+    let baliseNom = document.getElementById("nom")
+    let baliseEmail = document.getElementById("email")
+
 
     let spanErreurMessage = document.getElementById("erreurMessage")
 
@@ -46,6 +49,10 @@ function afficherMessageErreur(message) {
         spanErreurMessage.id = "erreurMessage"
 
         popup.append(spanErreurMessage)
+        
+        baliseNom.value =''
+        baliseEmail.value =''
+
     }
     spanErreurMessage.innerText = message
 }
